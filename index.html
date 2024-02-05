@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="hearts">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                        <div class="four"></div>
+                        <div class="five"></div>
+                    </div>
+
+                    <div class="text">
+                        <strong></strong>
+                        <p>
+                           
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const hearts = document.querySelector('.hearts');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            hearts.style.display = (hearts.style.display === 'none' || hearts.style.display === '') ? 'grid' : 'none';
+        });
+    </script>
+</body>
+</html>
