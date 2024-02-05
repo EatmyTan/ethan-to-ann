@@ -1,12 +1,12 @@
 :root{
   --primary: #fff;
-  --bg-color: rgb(5, 53, 61);
+  --bg-color: rgb(172, 120, 186);
   --bg-envelope-color: #f5edd1;
   --envelope-tab: #ecdeb8;
   --envelope-cover: #e6cfa7;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
-  --heart-color: rgb(252, 8, 231);
+  --heart-color: rgb(214,0,0);
 }
 body{
   margin: 0;
@@ -19,8 +19,11 @@ body{
 }
 .container {
   height: 100vh;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  /* place-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 .container > .envelope-wrapper {
   background: var(--bg-envelope-color);
@@ -176,6 +179,19 @@ body{
   animation: heart 1.7s ease-out infinite;
 }
 
+.shadow {
+  top:30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  height: 25px;
+  border-radius:50%;
+  background-color: rgba(0,0,0,0.3);
+  animation: scale 3s linear infinite;
+  z-index:-1;
+}
+
 @keyframes heart {
   0%{
     transform: translateY(0) rotate(-45deg) scale(0.3);
@@ -192,5 +208,14 @@ body{
   }
   50% {
     transform: translateY(-30px);
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.85);
   }
 }

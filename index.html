@@ -21,22 +21,25 @@
                     </div>
 
                     <div class="text">
-                        <strong></strong>
+                        <strong>Dear ___</strong>
                         <p>
-                           
+                           You're the air I need, I'm dying just to breathe
                         </p>
                     </div>
                 </div>
             </div>
             <div class="heart"></div>
         </div>
+
+        <div class="shadow"></div>
     </div>
+
     <script>
         const envelope = document.querySelector('.envelope-wrapper');
         const hearts = document.querySelector('.hearts');
         envelope.addEventListener('click', () => {
             envelope.classList.toggle('flap');
-            hearts.style.display = (hearts.style.display === 'none' || hearts.style.display === '') ? 'grid' : 'none';
+            hearts.style.display = (hearts.style.display === 'none' || hearts.style.display === '') ? 'block' : 'none';
         });
     </script>
 </body>
